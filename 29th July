@@ -1,0 +1,51 @@
+What is K8S ?
+Started by Google in 2014
+Donated to CNCF
+Written in Go Lang
+What is Docker ?
+Docker Internals - NameSpaces/CGroups etc., you should know this
+What is Virtualization ?
+
+_____________________
+
+Install Docker // pip // flask 
+
+_____________________
+
+Python Hello World File:
+
+from flask import Flask
+import os
+app = Flask(__name__)
+@app.route('/')
+
+def hello():
+    return ('\nHello from Container World! \n\n')
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=8080, debug=True)
+    
+_____________________
+
+Dockerfile:
+
+FROM python:2.7-onbuild
+EXPOSE 8080
+CMD [ "python", "pythonhelloworld.py"]
+
+______________________
+
+requirements.txt:
+
+flask
+
+______________________
+
+
+docker build -t givesomelocalname .  // this will build the image locally
+docker build -t dockerhubusername/reponame:tagname . /// this syntax wil give you the optin in future to push the image to dockerhub correctly 
+
+
+
+
+
+
