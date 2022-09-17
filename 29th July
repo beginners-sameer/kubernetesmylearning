@@ -42,7 +42,16 @@ ______________________
 
 
 docker build -t givesomelocalname .  // this will build the image locally
-docker build -t dockerhubusername/reponame:tagname . /// this syntax wil give you the optin in future to push the image to dockerhub correctly 
+docker build -t dockerhubusername/reponame:tagname . /// this syntax wil give you the optin in future to push the image to dockerhub correctly   // either you can create the repo first in dockerhub and you push it from your local 
+
+or 
+
+docker build -t dockerhubusername/newreponame:tagname . // create a new repo from the command itself and push it
+
+docker push dockerhubusername/newreponame:tagname 
+docker push dockerhubusername/reponame:tagname
+
+
 
 
 
