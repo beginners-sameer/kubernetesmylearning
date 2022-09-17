@@ -1,0 +1,23 @@
+docker pull userid/reponame:tagname
+
+in the python file the ports whichever you have exposed, you have to give the same port # when you are trying run the container
+
+docker run -d -p hostport:containerport  imagename
+
+make sure :containerport matches the exposed port in the python file
+
+docker stats containername  // it displays the cpu utilization/memory usage
+
+docker logs containername > filename.log   // for logging
+
+docker logs containername > filename.log 2>&1 // this will show the error logs as well in the same file
+
+docker exec -it containername bash
+
+docker logs -f containername   // this will show the live logs
+
+docker save imagename:tag -o somefilename.tar
+docker load -i somefilename.tar
+
+
+
