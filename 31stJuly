@@ -1,1 +1,4 @@
 this is mainly regarding docker networking 
+docker compose details etc., 
+
+docker-compose up -d
