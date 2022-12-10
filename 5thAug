@@ -1,3 +1,42 @@
 this is about Docker volumes
 
 look for the voltha project and see the examples of docker volumes
+
+_______________________________________________________
+
+
+version: "2"
+services:
+  web:
+    image: nginx
+    environment:
+      HOST: localhost
+      DB: TEST
+    volumes:
+      - "/opt/test:/opt/test"
+      
+_____________________________________________________
+
+docker volume --help
+docke volume inspect
+docker volume prune
+
+
+docker run -d --name nginx -v /opt/test:/opt/xyz nginx
+
+docker exec -it nginx sh
+
+docker run --help
+
+
+docker run -d --name nginx -v /opt/test:/opt/xyz --env HOST=localhost nginx
+
+_____________________________________________________
+
+Architecture :
+
+Master:
+1. API server  -> 2. Scheduler -> 3. Controller -> 4. etcd ( no sql db - kv pair )
+
+
+
