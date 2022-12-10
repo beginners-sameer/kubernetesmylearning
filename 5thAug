@@ -38,5 +38,12 @@ Architecture :
 Master:
 1. API server  -> 2. Scheduler -> 3. Controller -> 4. etcd ( no sql db - kv pair )
 
+kube-apiserver
+etcd
+kube-controller-manager
+cloud-controller-manager
+kube-scheduler
+
+
 
 
