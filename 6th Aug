@@ -6,8 +6,8 @@ kubectl get po -n kube-system -o wide
 kubectl api-resources
 
 kubectl run mypod --image=rajendrait/ust1 --restart=Never
- kubectl get po
- kubectl run mypod --image=nginx --restart=Never
+kubectl get po
+kubectl run mypod --image=nginx --restart=Never
  
-  kubectl expose po mypod --type=NodePort --port=8080 --name myservice
+kubectl expose po mypod --type=NodePort --port=8080 --name myservice
   
