@@ -10,5 +10,15 @@ kubectl get po
 kubectl run mypod --image=nginx --restart=Never
  
 kubectl expose po mypod --type=NodePort --port=8080 --name myservice
-1:31 stopped
+
+
+kubectl run mypod --image=sldfjdlfjd --restart=Never --dry-run=client -o yaml > dry.yaml
+
+kubectl create deployment mydeploy --image=nginx --dry-run=client -o yaml > mydeploy.yaml
+
+kubectl apply -f mydeploy.yaml
+
+kubectl get deploy
+
+1.58
   
