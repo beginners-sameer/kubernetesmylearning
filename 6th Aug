@@ -1,0 +1,10 @@
+kubectl get namespaces
+kubectl get namespaces
+kubectl get po -n default
+kubectl get po -n kube-system
+kubectl get po -n kube-system -o wide
+kubectl api-resources
+
+kubectl run mypod --image=rajendrait/ust1 --restart=Never
+ kubectl get po
+ kubectl run mypod --image=nginx --restart=Never
