@@ -21,4 +21,75 @@ kubectl apply -f mydeploy.yaml
 kubectl get deploy
 
 1.58
+
+kubectl api-resources
+kubectl explain node.spec
+kubectl explain node --recursive
+kubectl describe node
+kubectl get po --al-namespaces
+kubectl get po -A
+kubectl get po -n kube-system
+kubectl get po --namespace=kube-system
+kubectl create --namespace=X
+kubectl delete
+kubectl label
+
+
+PS C:\Users\devop\Documents\KubernetesLearningPlan\container.training\dockercoins> kubectl -n kube-public get configmaps
+NAME               DATA   AGE
+cluster-info       1      2d5h
+kube-root-ca.crt   1      2d5h
+
+kubectl -n kube-public get configmaps cluster-info -o yaml
+kubectl get svc
+kubectl get services
+kubectl version
+
+kubectl run pingpong --image alpine ping 127.0.0.1
+
+kubectl logs pingpong
+kubectl logs pingpong --tail 1 --follow
+
+kubectl create deployment pingpong --image=alpine -- ping 127.0.0.1
+
+kubectl get all
+
+kubectl scale deployment pingpong --replicas 3
+or
+kubectl scale deployment/pingpong --replicas 3
+kubectl get po
+kubectl logs deploy/pingpong --tail 2
+
+
+watch kubectl get po
+kubectl delete po pingpong-xxxxx-yyy
+
+ kubectl create job flipcoin --image=alpine -- sh -c 'exit $(($RANDOM%2))'
+ 
+ kubectl create cronjob every3mins --schedule="*/3 * * * * " \
+ --image=alpine -- sleep 10
+ 
+ kubectl get cronjobs
+ kubectl create deployment clock --image=jeptazzo/clock
+ 
+ kubectl describe deployment clock
+ 
+ kubectl get po
+ kubectl describe po clock-xxxx-yyy
+ 
+ kubectl get po --selector=app=clock
+ kubectl get po --selector=app
+ 
+ 
+ kubectl label deployment clock color=blue
+ kubectl describe deployment clock
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
   
