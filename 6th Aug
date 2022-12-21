@@ -20,7 +20,24 @@ kubectl apply -f mydeploy.yaml
 
 kubectl get deploy
 
-1.58
+k run mydeploy --image=nginx --restart=OnFailure -dry-run=client -o yaml > mydeploy.yaml
+vi mydeploy.yaml
+
+The above will create the pod
+
+____________________
+
+k create deploy mydeploy --image=nginx --dry-run=client -o yaml > mydeploy.yaml
+
+k get rs
+
+k get deploy
+k get svc
+
+k apply -f mydeploy.yaml
+
+1:46
+
 
 kubectl api-resources
 kubectl explain node.spec
